@@ -1,0 +1,66 @@
+Studiepopulationen Šr alla fšrstfšderskor (994 st), boende i Malmš, 
+som besškte nŒgonav fyra mšdravŒrdscentraler (tŠcker ca 90%) under 
+tiden september 1991 till september 1992. 872 personer valde att 
+delta. Missfall (17 st) och tvillingfšdslar (12 st) stršks. Kvar 
+blev 747 personer som besvarade en enkŠt pŒ MVC och en pŒ BB efter 
+fšrlossningen.
+
+Man Šr intresserad av hur psykosocial stress pŒverkar risken fšr
+att fšda ett fšr litet (undernŠrt) barn.
+
+"Fšr litet" (SGA = small for gestational age) ligger mer Šn 2 
+standardavvikelser under medelvikten fšr fšdelseveckan, olika fšr 
+pojkar och flickor. Man kan tyvŠrr inte skilja pŒ barn som Šr smŒ 
+pga undernŠring och sŒdana som "skall" vara smŒ, dŠrfšr behšver man 
+korrigera fšr moderns lŠngd: smŒ mšdrar borde fŒ smŒ barn.
+
+Psykosocial stress kan definieras som brist pŒ instrumentellt stšd 
+("har du nŒgon du kan fŒ hjŠlp av med praktiska saker?"), 
+emotionellt stšd ("har du nŒgon du kan prata med"), social 
+fšrankring ("har du bra kontakt med slŠkten?") och/eller socialt 
+deltagande ("hur ofta gŒr du pŒ bio?").
+
+Man vet ocksŒ att rškning škar risken och eventuellt ocksŒ moderns 
+Œlder (stšrre risk i den hšgsta Œldersgruppen). Dessutom kan man 
+kanske ta hŠnsyn till invandring, lŒg utbildning, alkoholkonsumtion,
+motionsvanor (trŠnar man mycket tar man all nŠring sjŠlv), om man 
+inte sammanbor med barnets far och om barnet Šr oplanerat.
+
+Man kan ocksŒ behšva BMI = (vikt i kg)/(lŠngd i m)^2 som mŒtt pŒ om 
+moderns Šr vŠlnŠrd (lŠngd och vikt korrelerar fšr mycket fšr att tas 
+med samtidigt).
+
+Filen  birth.dat  Šr en ascii-fil som innehŒller 26 variabler, 747 
+individer. En punkt betyder saknat vŠrde.
+
+Variabler:
+ 1. graviditetsdag
+ 2. kšn                 1=pojke,        2=flicka
+ 3. barnets vikt i gram
+ 4. moderns Œlder i Œr
+ 5. SGA                 0=normalviktig, 1=underviktig
+ 6. kompikationer       0=inga,         1=komplikationer
+ 7. nationalitet        0=svensk,       1=ej svensk
+   (ej svensk = man sjŠlv och bŒda fšrŠldrarna fšdda utomlands)
+ 8. Œldersgrupp         1=15-24 Œr, 2=25-29 Œr, 3=30-44 Œr
+ 9. instrumentellt stšd 0=ja,           1=nej (brist)
+10. emotionellt stšd    0=ja,           1=nej (brist)
+11. social fšrankring   0=ja,           1=nej (brist)
+12. socialt deltagande  0=ja,           1=nej (brist)
+13. barnets lŠngd i cm
+14. barnets huvudomfŒng i cm
+15. moderns vikt i kg
+16. moderns lŠngd i cm
+17. utbildning          1=>12 Œr, 2=10-12 Œr, 3=<9Œr
+18. sambo med fadern    1=ja,           2=nej
+19. planerat barn       1=ja,           2=nej
+20. rškvanor            1=icke-rškare, 2=slutat, 3=ršker
+21. passiv rškning      0=nej,          1=ja
+22. kort moder          0=normal,       1=kort
+23. lŠtt moder          0=normal,       1=lŠtt
+24. rškexponering       1=ingen ršk, 2=passiv ršk, 3=egen ršk
+25. motion              1=lŒg-medel,    3=hšg
+26. alkohol             0=absolutist, 1=slutat pga gravid, 2=dricker
+
+
+Datamaterialet kommer ifrŒn Anna Lindgren, anna@maths.lth.se.

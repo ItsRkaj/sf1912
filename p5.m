@@ -8,12 +8,11 @@ momsWeight = birth(:, 15);
 childsWeight = birth(:, 3);
 
 % Create a figure for normal probability plots
+
 figure;
 
 variables = {'Mother''s Age', 'Mother''s Height', 'Mother''s Weight', 'Child''s Weight'};
 data = {age, height, momsWeight, childsWeight};
-
-figure;
 
 for i = 1:4
     subplot(2,2,i)

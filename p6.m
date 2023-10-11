@@ -2,30 +2,32 @@
 load moore.dat
 
 % Extract the columns of interest
-x = moore(:, 1);
-y = moore(:, 2);
+year = moore(:, 1);
+nbr_of_transistors = moore(:, 2);
 
 % Transform transistor values from exponential to linear
-w = log(y);
+w = log(nbr_of_transistors);
 
 % Create a matrix with ones on the left and data values on the right
-X = [ones(size(x)), x];
+X = [ones(size(year)), year];
 
 % Perform linear regression to estimate the coefficients
 [B_hat, ~, ~, ~, STATS] = regress(w, X);
-w_hat = X * B_hat;
+y_pred = X * B_hat;
 
 % Plot the original data and the linear regression model
 figure
-subplot(2,1,1)
-plot(x, w, 'b', x, w_hat, 'r')
+subplot(3,1,1)
+plot(year, w, 'b', year, y_pred, 'r')
 title("Moore's Law: Transistor Growth Over Time")
 legend('Original Data', 'Linear Regression Model')
 
-% Check if the difference between data (w) and model values (w_hat) follows a normal distribution
-difference = w - w_hat;
-subplot(2,1,2)
-normplot(difference)
+% Check if the difference between data (w) and model values (y_pred) follows a normal distribution
+res = w - y_pred;
+
+subplot(3,1,2), normplot(res)
+subplot(3,1,3), histogram(res)
+
 title('Normal Probability Plot of Residuals')
 
 % Calculate R-squared value

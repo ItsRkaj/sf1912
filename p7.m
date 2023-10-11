@@ -22,10 +22,8 @@ motherWeight = birth(:,15);   % Mother's weight
 smokesMother = birth(:,20) == 3;   % If the mother smokes
 drinksMother = birth(:,26) == 2;  % If the mother drinks
 
-childWeight2 = birth(:, 3);  % Child's weight
-
 X2 = [ones(size(motherWeight)), motherWeight, smokesMother, drinksMother];
-[B_coeffs, BINT, R] = regress(childWeight2, X2);
+[B_coeffs, BINT, R] = regress(childWeight, X2);
 predictedChildWeight2 = X2 * B_coeffs;  % Estimate of child's weight
 
 fprintf('Coefficients: %d \n', B_coeffs);

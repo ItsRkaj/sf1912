@@ -4,9 +4,9 @@ b = 4;
 x = raylrnd(b, M, 1);
 hist_density(x, 40)
 hold on
-
+xbar = mean(x);
 my_est_ml = sqrt((1/M)*(sum(x.^2) / 2));
-my_est_mk = mean(x)/sqrt(pi/2);
+my_est_mk = xbar/sqrt(pi/2);
 
 plot(my_est_ml, 0, 'r*')
 plot(my_est_mk, 0, 'g*')
